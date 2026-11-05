@@ -1,0 +1,19 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: dark; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px); }
+  body { background:#020b24; color:#e8eefc; }
+  /* Fundo com gradiente marinho inspirado na identidade da marca */
+  .bg-hero { background:
+      radial-gradient(60% 50% at 75% 20%, rgba(11,127,224,.35), transparent 70%),
+      radial-gradient(50% 40% at 10% 80%, rgba(10,58,143,.45), transparent 70%),
+      linear-gradient(180deg,#041540 0%,#020b24 100%); }
+  .glass { background: rgba(255,255,255,.05); border:1px solid rgba(120,170,255,.18); backdrop-filter: blur(10px); }
+  .bar { background: linear-gradient(180deg,#38a3ff,rgba(11,127,224,.15)); border-radius:6px 6px 0 0; transform-origin:bottom; animation: grow 1.1s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  a:focus-visible, button:focus-visible { outline:2px solid #38a3ff; outline-offset:3px; }
+  @media (prefers-reduced-motion: reduce) { .bar { animation:none; } html { scroll-behavior:auto; } }
+
+.sprite{position:absolute;width:0;height:0}
+.hdr-safe{padding-top:env(safe-area-inset-top,0px)}
+.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}
